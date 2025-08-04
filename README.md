@@ -1,16 +1,23 @@
-# Flappy Bird Demo
+# Context-Based Language Learning App
 
-This repository contains a simple Flappy Bird clone implemented with `pygame`.
+This repository contains a basic scaffold for a location-aware language learning application.
 
-## Requirements
+## Directory Structure
 
-- Python 3
-- pygame (`pip install pygame`)
+- `backend/` – WSGI application that serves context-specific vocabulary.
+- `frontend/` – Placeholder for web-based user interfaces.
+- `mobile/` – Placeholder for mobile application code.
+- `docs/` – Documentation and project planning materials.
+- `tests/` – Test suites for the project.
 
-## Running the Game
+## Backend Prototype
+
+A minimal WSGI server exposes a `/vocab` endpoint that returns vocabulary for a given context.
 
 ```bash
-python flappy.py
+python backend/app.py
+# then in another terminal
+curl 'http://127.0.0.1:8000/vocab?context=cafe'
 ```
 
-Press the space bar to flap. Avoid the pipes and try to get the highest score!
+The vocabulary data is currently hard coded for demo purposes.
